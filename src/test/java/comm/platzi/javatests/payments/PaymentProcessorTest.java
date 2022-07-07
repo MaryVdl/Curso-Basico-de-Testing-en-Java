@@ -11,12 +11,11 @@ public class PaymentProcessorTest {
     private PaymentGateway paymentGateway;
     private PaymentProcessor paymentProcessor;
 
-
     //Metodo setup donde normalmente se ponen los bloques de codigo comunes
     @Before // Junit ejecuta este metodo antes de ejecutar los metodos siguientes, (cada uno)
     public void setup(){
-        PaymentGateway paymentGateway= Mockito.mock(PaymentGateway.class);
-        PaymentProcessor paymentProcessor = new PaymentProcessor(paymentGateway);
+        paymentGateway= Mockito.mock(PaymentGateway.class);
+        paymentProcessor = new PaymentProcessor(paymentGateway);
     }
     @Test
     public void payment_is_correct(){
